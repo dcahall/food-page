@@ -272,5 +272,56 @@ window.addEventListener('DOMContentLoaded', function() {
 			prevModalDialog.classList.add('show');
 			closeModal();
 		}, 4000)
-	} 
+	}
+
+	// Sliders
+
+	const	offer_slider = document.querySelector('.offer__slider'),
+			nextSlide = offer_slider.querySelector('.offer__slider-next'),
+			prevSlide = offer_slider.querySelector(".offer__slider-prev"),
+			totalSlide = offer_slider.querySelector('#total'),
+			currentSlide = offer_slider.querySelector('#current'),
+			allSlides = offer_slider.querySelectorAll('.offer__slide'),
+			slidesWrapper = offer_slider.querySelector('.offer__slider-wrapper'),
+			slidesField = offer_slider.querySelector(".offer__slider-inner");
+			width = window.getComputedStyle(slidesWrapper).width;
+	let		slideIndex = 0;
+	let		offsetX = 0;
+
+	slidesField.style.cssText = `width: ${100 * allSlides.length + '%'};
+								display: flex;
+								transition: 0.5s all;`;
+	slidesWrapper.style.overflow = 'hidden';
+
+	allSlides.forEach(slide => slide.style.width = width);
+
+	function showSlide() {
+		currentSlide.textContent = getZero(slideIndex + 1);
+		slidesField.style.transform = `translate(-${offsetX}px)`;
+	}
+
+	nextSlide.addEventListener('click', () => {
+		if (offsetX === width.slice(0, width.length - 2) * (allSlides.length - 1)) {
+			offsetX = 0;
+			slideIndex = 0;
+		} else {
+			offsetX = offsetX + +width.slice(0, width.length - 2);
+			++slideIndex;
+		}
+		showSlide();
+	});
+
+	prevSlide.addEventListener('click', () => {
+		if (slideIndex == 0) {
+			slideIndex = allSlides.length - 1;
+			offsetX = width.slice(0, width.length - 2) * (allSlides.length - 1)
+		} else {
+			offsetX = offsetX - +width.slice(0, width.length - 2);
+			--slideIndex;
+		}
+		showSlide(slideIndex);
+	})
+
+	totalSlide.textContent = getZero(allSlides.length);
+	showSlide();
 });
