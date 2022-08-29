@@ -1,9 +1,9 @@
 # Food-page
 **Launching:**
++ 1. Clone this repo and go to it
 ```
-sh npm i
-npm webpack
-npx json-server db.json
+sh
+git clone git@github.com:dcahall/Food-page.git && cd Food-page
 ```
 
 **Launching the bonus part:**
