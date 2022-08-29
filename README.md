@@ -2,8 +2,8 @@
 **Launching:**
 ```
 sh npm i
-sh npm webpack
-sh npx json-server db.json
+npm webpack
+npx json-server db.json
 ```
 
 **Launching the bonus part:**
