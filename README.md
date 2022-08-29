@@ -1,9 +1,22 @@
 # Food-page
 **Launching:**
-1. Clone this repo and go to it
+1. Clone this repo and go to it:
 ``` sh
 git clone git@github.com:dcahall/Food-page.git && cd Food-page
 ```
+2. Install all npm packages:
+``` sh
+nmp i
+```
+3. Run the module builder webpack:
+``` sh
+npx webpack
+```
+4. Run JSON-server:
+``` sh
+npm json-server db.json
+```
+5. Open index.html
 
 **Launching the bonus part:**
 ``` sh
