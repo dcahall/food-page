@@ -1,5 +1,6 @@
 # Food-page
 This is a one-page site for home delivery of rationed food. The functionality of the site is written entirely in JS. 
+____
 **Launching:**
 1. Clone this repo and go to it:
 ``` sh
@@ -18,4 +19,14 @@ npx webpack
 npx json-server db.json
 ```
 5. Open index.html
+____
+**Features**
+- Modal window
+- Slider
+- Calorie Calculator 
+- Calorie Calculator uses local storage
+- Ability to send get/post requests using json-server
+- Timer 
+
+
 
