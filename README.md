@@ -1,4 +1,5 @@
 # Food-page
+_____
 **Launching:**
 1. Clone this repo and go to it:
 ``` sh
@@ -17,7 +18,7 @@ npx webpack
 npm json-server db.json
 ```
 5. Open index.html
-
+______
 **Launching the bonus part:**
 ``` sh
 cd make && make bonus && ./philo_bonus arg1 arg2 arg3 arg4 arg5
