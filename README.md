@@ -1,6 +1,6 @@
 # Food-page
 **Launching:**
-- 1. Clone this repo and go to it
+1. Clone this repo and go to it
 ``` sh
 git clone git@github.com:dcahall/Food-page.git && cd Food-page
 ```
